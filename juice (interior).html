@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juices</title>
+</head>
+<style>
+    body{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    #input1:hover{
+        border: solid;
+        border-color: lightcoral;
+    }
+</style>
+<body>
+    <img  src="juice.webp" height="350">
+    <figcaption style="font-size: 40px; font-family: ink free; font-weight: bolder; padding-top: 10px;">Juices</figcaption>
+    <br/>
+    <hr>
+    <br/>
+    <div style="font-size: 25px; font-family: ink free; font-weight:bolder;">
+        Choose which flavour you want : <br/><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Orange</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Mango</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Strawberry</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Lemon</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Apple</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Banana</label><br/><br/>
+        <input id="input1" type="button" value="Order" name="Order" style="font-size: 20px; padding: 3px;" onclick="order()">
+    </div>
+    <script>
+        function order()
+        {
+            open("sign up.html")
+        }
+    </script>
+</body>
+</html>

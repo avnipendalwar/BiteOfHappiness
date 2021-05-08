@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<style>
+    body{
+        font-size: 25px;
+        padding-top: 40px;
+        text-align: center;
+        background-image: url("sign\ up\ backgroung\ img.jpg");
+    }
+    #p1{
+        color: black;
+        font-family: ink free;
+        font-weight: bolder;
+    }
+    #p2{
+        color: black;
+        font-family: ink free;
+        font-weight: bolder;
+    }
+
+    #p4{
+        color: black;
+        font-family: ink free;
+        font-weight: bolder;
+    }
+
+    #p5{
+        color: khaki;
+        font-family: ink free;
+        font-weight: bolder;    
+    }
+
+    .f1{
+        padding:7px;
+        color: gray;
+        border:khaki;
+        border-style: solid;
+        font-family: ink free;
+        font-weight:bold;
+    }
+
+    .f2{
+        padding:7px;
+        color: gray;
+        border:khaki;
+        background-color:papayawhip;
+        font-family: ink free;
+        font-weight:bold;
+    }
+
+    .f1:hover{
+        background-color:khaki;
+    }
+
+    .f2:hover{
+        background-color:khaki;
+    }
+
+    .f1:focus{
+        background-color:khaki;
+        border: lavenderblush;
+    }
+
+</style>
+<body>
+    <h1 style="font-family: ink free;"><b>Sign up</b></h1>
+    <form method="POST" name="form1" action="order message.html" onsubmit="return validate()">
+        <label for="fn"></label>
+        <input class="f1" type="text" name="fn" placeholder="Full name" size="40" autofocus><br/>
+        <p id="p1" class="vld"> </p>
+
+        <label for="email"></label>
+        <input class="f1" type="email" name="email" size="30" placeholder="Email" autofocus><br/>
+        <p id="p2" class="vld"></p>
+
+        <label for="dob"></label>
+        <input class="f1" type="date" name="dob" size="30" placeholder="Date of birth" autofocus><br/><br/>
+
+        <label for="mn"></label>
+        <input class="f1" type="number" name="mn" size="30" maxlength="10" placeholder="Mobile number" autofocus><br/>
+        <p id="p3" class="vld"></p>
+
+        <label for="address"></label>
+        <textarea  class="f1" name="address" cols="10" rows="4" placeholder="address"></textarea><br/>
+
+        <label for="pass"></label>
+        <input class="f1" type="password" name="pass" size="30" placeholder="password" autofocus><br/>
+        <p id="p4"></p>
+
+        <label for="cp"></label>
+        <input class="f1" type="password" name="cp" size="30"placeholder="confirm password" autofocus><br/>
+        <p id="p5"></p>
+
+        <input class="f2" type="submit" name="submit" style="font-size: 18px;" value="Submit">
+        <input class="f2" type="reset" name="reset" style="font-size: 18px;" value="Reset">
+    </form>
+    <script>
+    function validate()
+    {   
+        if(document.form1.fn.value=="")
+        {
+            document.getElementById("p1").innerHTML="Please enter your full name!"
+            document.form1.fn.focus()
+            return false
+        }
+        else
+        {
+            document.getElementById("p1").innerHTML=""
+        }
+        
+        if(document.form1.email.value=="")
+        {
+            document.getElementById("p2").innerHTML="Please enter your email address!"
+            return false
+        }
+        
+        var emailID=document.form1.email.value
+        atTHErate=emailID.indexOF("@")
+        dot=emailID.lastIndexOf(".")
+        if(atTHErate<1 || (dot-atTHErate<2))
+        {
+            document.getElementById("p2").innerHTML="Please enter your proper email address!"
+            document.form1.email.focus()
+            return false
+        }
+        else
+        {
+            document.getElementById("p2").innerHTML=""
+        }
+        var password=document.form1.pass.value
+        if(password=="")
+        {
+            document.getElementById("p4").innerHTML="Please enter your password!"
+            document.form1.pass.focus()
+            return false
+        }
+        else if(password.length<=10)
+        {
+            document.getElementById("p4").innerHTML="The password must contain more than 10 digts!"
+            document.form1.pass.focus()
+            return false
+        }
+        else{
+            document.getElementById("p4").innerHTML=""
+        }
+        var Confirmpassword=document.form1.cp.value
+        if(Confirmpassword=="")
+        {
+            document.getElementById("p5").innerHTML="Please confirm your password!"
+            document.form1.cp.focus()
+            return false
+        }
+        else if(Confirmpassword!=password)
+        {
+            document.getElementById("p5").innerHTML="The confirmed password must match with the password!"
+            document.form1.cp.focus()
+            return false
+        }
+        else{
+            document.getElementById("p5").innerHTML=""
+        }
+    }
+
+    
+    </script>
+</body>
+</html>

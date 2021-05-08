@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thali</title>
+</head>
+<style>
+    body{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    #input1:hover{
+        border: solid;
+        border-color: lightcoral;
+    }
+</style>
+<body>
+    <img  src="thali.webp" height="350">
+    <figcaption style="font-size: 40px; font-family: ink free; font-weight: bolder; padding-top: 10px;">Thali</figcaption>
+    <br/>
+    <hr>
+    <br/>
+    <div style="font-size: 25px; font-family: ink free; font-weight:bolder;">
+        Choose what all items you want to add to your meal : <br/><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Sambar</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Dahi</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Buttermilk</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Tomato</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Onion</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Papad</label><br/><br/>
+        <input id="input1" type="button" value="Order" name="Order" style="font-size: 20px; padding: 3px;" onclick="order()">
+    </div>
+    <script>
+        function order()
+        {
+            open("sign up.html")
+        }
+    </script>
+</body>
+</html>

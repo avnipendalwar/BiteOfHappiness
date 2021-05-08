@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+</head>
+<style>
+    body{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    #input1:hover{
+        border: solid;
+        border-color: lightcoral;
+    }
+</style>
+<body>
+    <img  src="coffee.webp" height="350">
+    <figcaption style="font-size: 40px; font-family: ink free; font-weight: bolder; padding-top: 10px;">Coffee</figcaption>
+    <br/>
+    <hr>
+    <br/>
+    <div style="font-size: 25px; font-family: ink free; font-weight:bolder;">
+        Choose which type of coffee you want : <br/><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Affogato</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Americano</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Caffe` latte</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Caffe` mocha</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Cafe` au leit</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Cappuccino</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Espresso</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Irish coffee</label><br/><br/>
+        <input id="input1" type="button" value="Order" name="Order" style="font-size: 20px; padding: 3px;" onclick="order()">
+    </div>
+    <script>
+        function order()
+        {
+            open("sign up.html")
+        }
+    </script>
+</body>
+</html>

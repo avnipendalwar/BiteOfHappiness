@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbeque</title>
+</head>
+<style>
+    body{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    #input1:hover{
+        border: solid;
+        border-color: lightcoral;
+    }
+</style>
+<body>
+    <img  src="barbeque.webp" height="350">
+    <figcaption style="font-size: 40px; font-family: ink free; font-weight: bolder; padding-top: 10px;">Barbeque</figcaption>
+    <br/>
+    <hr>
+    <br/>
+    <div style="font-size: 25px; font-family: ink free; font-weight:bolder;">
+        Choose which type of barbeque you want : <br/>
+        Onions are added by default.<br/><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Paneer</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Veg(capsicum,tomato,onion)</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Chicken</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Beaf</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Prawns</label><br/>
+        <input type="checkbox" name="tomato">
+        <label for="tomato">Fish(new)</label><br/><br/>
+        <input id="input1" type="button" value="Order" name="Order" style="font-size: 20px; padding: 3px;" onclick="order()">
+    </div>
+    <script>
+        function order()
+        {
+            open("sign up.html")
+        }
+    </script>
+</body>
+</html>
